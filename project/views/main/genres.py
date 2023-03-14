@@ -21,7 +21,7 @@ class GenresView(Resource):
 @api.route('/<int:genre_id>/')
 class GenreView(Resource):
     @api.response(404, 'Not Found')
-    @api.marshal_with(genre, code=200, description='OK')
+    @api.marshal_with(genre, code=201, description='OK')
     def get(self, genre_id: int):
         """
         Get genre by id.
